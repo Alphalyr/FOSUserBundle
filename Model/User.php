@@ -529,7 +529,7 @@ abstract class User implements UserInterface, GroupableInterface
                $this->getPasswordRequestedAt()->getTimestamp() + $ttl > time();
     }
 
-    public function setRoles(array $roles)
+    public function setRoles(array $roles = null)
     {
         $this->roles = array();
 

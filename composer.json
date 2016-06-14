@@ -33,10 +33,6 @@
         "symfony/phpunit-bridge": "~2.7|~3.0",
         "symfony/validator": "~2.3|~3.0",
         "symfony/yaml": "~2.3|~3.0",
-        "willdurand/propel-typehintable-behavior": "~1.0"
-    },
-    "suggest": {
-        "willdurand/propel-typehintable-behavior": "Needed when using the propel implementation"
     },
     "autoload": {
         "psr-4": { "FOS\\UserBundle\\": "" }

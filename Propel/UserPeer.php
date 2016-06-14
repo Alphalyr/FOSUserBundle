@@ -11,7 +11,7 @@
 
 namespace FOS\UserBundle\Propel;
 
-use FOS\UserBundle\Propel\om\BaseUserPeer;
+use FOS\UserBundle\Propel\Base\UserPeer as BaseUserPeer;
 
 class UserPeer extends BaseUserPeer
 {

@@ -11,6 +11,8 @@
 
 namespace FOS\UserBundle\Model;
 
+use FOS\UserBundle\Propel\Group as Group;
+
 /**
  * @author Thibault Duplessis <thibault.duplessis@gmail.com>
  * @author Johannes M. Schmitt <schmittjoh@gmail.com>
@@ -48,7 +50,7 @@ interface GroupableInterface
      *
      * @return self
      */
-    public function addGroup(GroupInterface $group);
+    public function addGroup(Group $group);
 
     /**
      * Remove a group from the user groups.
@@ -57,5 +59,5 @@ interface GroupableInterface
      *
      * @return self
      */
-    public function removeGroup(GroupInterface $group);
+    public function removeGroup(Group $group);
 }

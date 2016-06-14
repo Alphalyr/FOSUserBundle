@@ -14,6 +14,7 @@ namespace FOS\UserBundle\Propel;
 use FOS\UserBundle\Model\UserInterface;
 use FOS\UserBundle\Model\UserManager as BaseUserManager;
 use FOS\UserBundle\Util\CanonicalizerInterface;
+use Propel\Runtime\ActiveQuery\PropelQuery;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
 
 class UserManager extends BaseUserManager
@@ -111,6 +112,6 @@ class UserManager extends BaseUserManager
      */
     protected function createQuery()
     {
-        return \PropelQuery::from($this->class);
+        return PropelQuery::from($this->class);
     }
 }
