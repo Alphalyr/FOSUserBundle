@@ -13,7 +13,7 @@ namespace FOS\UserBundle\Propel;
 
 use FOS\UserBundle\Model\GroupableInterface;
 use FOS\UserBundle\Model\UserInterface;
-use FOS\UserBundle\Propel\om\BaseUser;
+use FOS\UserBundle\Propel\Base\User as BaseUser;
 
 class User extends BaseUser implements UserInterface, GroupableInterface
 {
@@ -47,8 +47,7 @@ class User extends BaseUser implements UserInterface, GroupableInterface
                 $this->expired,
                 $this->locked,
                 $this->credentials_expired,
-                $this->enabled,
-                $this->_new,
+                $this->enabled
             )
         );
     }
@@ -73,7 +72,6 @@ class User extends BaseUser implements UserInterface, GroupableInterface
             $this->locked,
             $this->credentials_expired,
             $this->enabled,
-            $this->_new
         ) = $data;
     }
 
@@ -153,7 +151,7 @@ class User extends BaseUser implements UserInterface, GroupableInterface
         return parent::removeRole(strtoupper($value));
     }
 
-    public function setRoles(array $v)
+    public function setRoles(array $v = null)
     {
         foreach ($v as $i => $role) {
             $v[$i] = strtoupper($role);
